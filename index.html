@@ -10,6 +10,9 @@
             --card-bg: #161616;
             --accent: #64439c; 
             --text: #e0e0e0;
+            /* Defined a glow variable for consistency */
+            --glow: 0 0 20px 2px rgba(100, 67, 156, 0.6);
+            --modal-glow: 0 0 40px 5px rgba(100, 67, 156, 0.8);
         }
 
         body {
@@ -51,9 +54,11 @@
             cursor: pointer;
         }
 
+        /* Added Outer Glow on Hover */
         .map-card:hover {
             border-color: var(--accent);
             transform: translateY(-5px);
+            box-shadow: var(--glow);
         }
 
         .map-card img {
@@ -86,10 +91,13 @@
             cursor: zoom-out;
         }
 
+        /* Added Outer Glow and Accent Border to Zoomed Image */
         .modal img {
             max-width: 95%;
             max-height: 95%;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--accent);
+            border-radius: 4px;
+            box-shadow: var(--modal-glow);
         }
 
         footer {
@@ -105,7 +113,7 @@
 <body>
 
     <header>
-        <h1>Bo7 Maps</h1>
+        <h1>Bo7 Ranked Maps</h1>
         <p style="color: #666;">Blueprints</p>
     </header>
 
